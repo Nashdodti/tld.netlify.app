@@ -1,0 +1,89 @@
+/* Mobile-first CSS optimization additions */
+
+/* Optimize images for different screen sizes */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Critical CSS for above-the-fold content */
+.header {
+  will-change: transform;
+}
+
+.firstview__image img {
+  will-change: transform;
+}
+
+/* Reduce animations on slower devices */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Optimize for touch devices */
+@media (hover: none) and (pointer: coarse) {
+  .lookbook__image:hover::after,
+  .lookbook__image:hover img,
+  .top__content:hover .top__bg-image {
+    /* Disable hover effects on touch devices */
+    opacity: initial;
+    transform: initial;
+  }
+}
+
+/* Better mobile touch targets */
+@media screen and (max-width: 420px) {
+  .menu__link,
+  .footer__item a,
+  .sns__icon a {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Optimize mobile images */
+  .lookbook__image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  /* Reduce heavy animations on mobile */
+  .js-hidden[data-emergence=hidden] {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  
+  .js-hidden[data-emergence=visible] {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Preload critical resources */
+.firstview {
+  contain: layout style paint;
+}
+
+/* Optimize font loading */
+.small-title,
+.medium-title,
+.big-title,
+.content-title {
+  font-display: swap;
+}
+
+/* Better mobile performance for modals */
+@media screen and (max-width: 800px) {
+  .modal {
+    will-change: transform;
+    transform: translateZ(0);
+  }
+}

@@ -1,0 +1,10 @@
+# Redirect old URLs
+/adans/* /index.html 301
+/external.html* /index.html 301
+
+# Handle SPA routing
+/* /index.html 200
+
+# Error pages
+/404 /404.html 404
+/500 /500.html 500

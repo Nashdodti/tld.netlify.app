@@ -1,5 +1,31 @@
 /*
-Content-Security-Policy: default-src ‘self’ ‘unsafe-inline’ ‘unsafe-eval’ https: data:
+  Content-Security-Policy: default-src 'self'; style-src 'self' 'unsafe-inline' https://use.fontawesome.com; font-src 'self' https://use.fontawesome.com; img-src 'self' data:; script-src 'self'
+  X-Frame-Options: SAMEORIGIN
+  X-XSS-Protection: 1; mode=block
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Content-Type-Options: nosniff
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+  Permissions-Policy: accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()
+  Cache-Control: public, max-age=31536000
+
+# Cache static assets for 1 year
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Cache images for 1 month  
+/img/*
+  Cache-Control: public, max-age=2592000
+
+# Cache HTML for 1 hour
+/*.html
+  Cache-Control: public, max-age=3600
+
+# Error pages
+/404.html
+  Cache-Control: no-cache
+  
+/500.html
+  Cache-Control: no-cache-Security-Policy: default-src ‘self’ ‘unsafe-inline’ ‘unsafe-eval’ https: data:
 X-Frame-Options: *ALLOW-FROM https://tlddodti.club*
 X-XSS-Protection: 1; mode=0
 Referrer-Policy: strict-origin-when-cross-origin
