@@ -28,26 +28,7 @@
   <!-- Stylesheets -->
   <link rel="stylesheet" media="screen" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="stylesheet" media="all" href="assets/style.css" data-turbolinks-track="reload">
-  
-  <style>
-    body {
-      min-height: 100vh;
-      background: #f8f8f8;
-    }
-    
-    .contact-container {
-      max-width: 600px;
-      margin: 120px auto 60px;
-      padding: 60px 40px;
-      background: #fff;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.08);
-      border-radius: 0;
-    }
-    
-    .contact-title {
-      font-size: 4rem;
-      text-align: center;
-      margin-bottom: 50px;
+</head>
       color: #232426;
       font-weight: 300;
       letter-spacing: 8px;
@@ -286,52 +267,194 @@
       </a>
     </div>
     <div class="sns__icon sns__icon--text">
-      <a target="_blank" href="contact.html">CONTACT</a>
+      <a href="contact.html">CONTACT</a>
     </div>
   </div>
 
   <!-- Main Content -->
   <main id="barba-wrapper">
     <div class="barba-container" data-namespace="contact">
-      <div class="contact-container">
-        <h1 class="contact-title">CONTACT</h1>
+      <div class="top">
+        <style>
+          .contact-page {
+            max-width: 800px;
+            margin: 100px auto 60px;
+            padding: 60px 40px;
+            background: transparent;
+          }
+          
+          .contact-page h1 {
+            font-size: 6rem;
+            text-align: center;
+            margin-bottom: 60px;
+            color: #232426;
+            font-weight: 300;
+            letter-spacing: 10px;
+            text-transform: uppercase;
+          }
+          
+          .contact-form {
+            max-width: 600px;
+            margin: 0 auto 80px;
+          }
+          
+          .form-row {
+            margin-bottom: 40px;
+          }
+          
+          .form-label {
+            display: block;
+            margin-bottom: 15px;
+            font-weight: 400;
+            color: #232426;
+            font-size: 1.4rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+          }
+          
+          .form-input,
+          .form-textarea {
+            width: 100%;
+            padding: 20px 0;
+            border: none;
+            border-bottom: 1px solid #ccc;
+            background: transparent;
+            font-size: 1.6rem;
+            font-family: inherit;
+            color: #232426;
+            transition: all 0.3s ease;
+            box-sizing: border-box;
+            outline: none;
+          }
+          
+          .form-input:focus,
+          .form-textarea:focus {
+            border-bottom: 2px solid #232426;
+          }
+          
+          .form-textarea {
+            min-height: 120px;
+            resize: vertical;
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin-top: 10px;
+          }
+          
+          .form-textarea:focus {
+            border: 2px solid #232426;
+          }
+          
+          .form-button {
+            background: #232426;
+            color: #fff;
+            padding: 20px 60px;
+            border: none;
+            font-size: 1.4rem;
+            font-weight: 400;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 40px auto 0;
+            display: block;
+          }
+          
+          .form-button:hover {
+            background: #000;
+            transform: translateY(-2px);
+          }
+          
+          .contact-info {
+            text-align: center;
+            margin-top: 80px;
+            padding-top: 40px;
+            border-top: 1px solid #ddd;
+          }
+          
+          .contact-info h3 {
+            font-size: 2.4rem;
+            margin-bottom: 30px;
+            color: #232426;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            font-weight: 300;
+          }
+          
+          .contact-info p {
+            font-size: 1.6rem;
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.6;
+          }
+          
+          .contact-info a {
+            color: #232426;
+            text-decoration: none;
+            transition: color 0.3s ease;
+          }
+          
+          .contact-info a:hover {
+            color: #666;
+          }
+          
+          .social-icons {
+            margin-top: 40px;
+          }
+          
+          .social-icons a {
+            display: inline-block;
+            margin: 0 25px;
+            font-size: 2.4rem;
+            color: #232426;
+            transition: all 0.3s ease;
+          }
+          
+          .social-icons a:hover {
+            color: #666;
+            transform: translateY(-3px);
+          }
+        </style>
         
-        <form class="contact-form" action="#" method="POST" netlify>
-          <div class="form-group">
-            <label class="form-label" for="name">Name</label>
-            <input class="form-input" type="text" id="name" name="name" required>
-          </div>
+        <div class="contact-page">
+          <h1>Contact</h1>
           
-          <div class="form-group">
-            <label class="form-label" for="email">Email</label>
-            <input class="form-input" type="email" id="email" name="email" required>
-          </div>
+          <form class="contact-form" method="POST" netlify>
+            <div class="form-row">
+              <label class="form-label" for="name">Name</label>
+              <input class="form-input" type="text" id="name" name="name" required>
+            </div>
+            
+            <div class="form-row">
+              <label class="form-label" for="email">Email</label>
+              <input class="form-input" type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-row">
+              <label class="form-label" for="subject">Subject</label>
+              <input class="form-input" type="text" id="subject" name="subject" required>
+            </div>
+            
+            <div class="form-row">
+              <label class="form-label" for="message">Message</label>
+              <textarea class="form-textarea" id="message" name="message" placeholder="Tell us about your project..." required></textarea>
+            </div>
+            
+            <button class="form-button" type="submit">Send Message</button>
+          </form>
           
-          <div class="form-group">
-            <label class="form-label" for="subject">Subject</label>
-            <input class="form-input" type="text" id="subject" name="subject" required>
-          </div>
-          
-          <div class="form-group">
-            <label class="form-label" for="message">Message</label>
-            <textarea class="form-textarea" id="message" name="message" placeholder="Tell us about your project..." required></textarea>
-          </div>
-          
-          <button class="form-submit" type="submit">Send Message</button>
-        </form>
-        
-        <div class="contact-info">
-          <h3>Get in Touch</h3>
-          <p>We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
-          <p>Email: <a href="mailto:tlddodti@mail.com">tlddodti@mail.com</a></p>
-          
-          <div class="social-links">
-            <a target="_blank" href="https://www.instagram.com/nashdodti" title="Instagram">
-              <i class="fab fa-instagram"></i>
-            </a>
-            <a target="_blank" href="https://twitter.com/nashdodti" title="Twitter">
-              <i class="fab fa-twitter"></i>
-            </a>
+          <div class="contact-info">
+            <h3>Get in Touch</h3>
+            <p>We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+            <p>Email: <a href="mailto:tlddodti@mail.com">tlddodti@mail.com</a></p>
+            
+            <div class="social-icons">
+              <a target="_blank" href="https://www.instagram.com/nashdodti" title="Instagram">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a target="_blank" href="https://twitter.com/nashdodti" title="Twitter">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </div>
           </div>
         </div>
       </div>
