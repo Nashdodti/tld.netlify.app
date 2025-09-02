@@ -33,6 +33,16 @@ setTimeout(function() {
     loader.style.display = 'none';
     console.log('Loader removed by debug script');
   }
+  
+  // Make sure images are visible
+  const hiddenElements = document.querySelectorAll('.js-hidden[data-emergence="hidden"]');
+  hiddenElements.forEach(function(el) {
+    el.setAttribute('data-emergence', 'visible');
+    el.style.opacity = '1';
+    el.style.transform = 'none';
+  });
+  
+  console.log('Made ' + hiddenElements.length + ' hidden elements visible');
 }, 3000);
 </script>
 </html>

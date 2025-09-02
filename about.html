@@ -97,8 +97,18 @@ Our design process focuses on creating garments that transcend trends and speak 
 </li>
 </ul>
 </footer>
-<div class="loader-wrap"><div id="lottie"></div></div>
+<div class="loader-wrap" style="display: none;"><div id="lottie"></div></div>
 </body>
 <script src="assets/main.js" data-turbolinks-track="reload"></script>
 <script src="javascripts/boot.js"></script>
+<script>
+// Debug script to remove loader if it gets stuck
+setTimeout(function() {
+  const loader = document.querySelector('.loader-wrap');
+  if (loader) {
+    loader.style.display = 'none';
+    console.log('Loader removed by debug script');
+  }
+}, 3000);
+</script>
 </html>
