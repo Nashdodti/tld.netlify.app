@@ -1,0 +1,1 @@
+console.log("Loading debug script..."); setTimeout(function() { const loader = document.querySelector(".loader-wrap"); if (loader) { loader.style.display = "none"; console.log("Loader removed"); } }, 2000);
