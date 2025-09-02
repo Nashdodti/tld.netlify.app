@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+  <meta content="width=device-width,initial-scale=1" name="viewport">
+  <meta content="Contact TLD - Get in touch with us" name="description">
+  <meta content="ie=edge" http-equiv="X-UA-Compatible">
+  <title>Contact - TLD</title>
+  
+  <!-- Open Graph / Facebook -->
+  <meta content="Contact - Tld Luxury" property="og:title">
+  <meta content="website" property="og:type">
+  <meta content="https://tld.netlify.app/contact.html" property="og:url">
+  <meta property="og:image" content="https://tlddodti.vercel.app/og.png">
+  <meta content="Tld Luxury" property="og:site_name">
+  <meta content="Contact TLD - Get in touch with us" property="og:description">
+  
+  <!-- Twitter -->
+  <meta property="twitter:image" content="https://tlddodti.vercel.app/og.png">
+  <meta content="summary_large_image" name="twitter:card">
+  <meta content="@nashdodti" name="twitter:site">
+  
+  <!-- Favicons -->
+  <link rel="shortcut icon" href="assets/favicon.ico">
+  <link rel="apple-touch-icon" href="assets/favicon.ico">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" media="screen" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" media="all" href="assets/style.css" data-turbolinks-track="reload">
+  
+  <style>
+    body {
+      min-height: 100vh;
+      background: #f8f8f8;
+    }
+    
+    .contact-container {
+      max-width: 600px;
+      margin: 120px auto 60px;
+      padding: 60px 40px;
+      background: #fff;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+      border-radius: 0;
+    }
+    
+    .contact-title {
+      font-size: 4rem;
+      text-align: center;
+      margin-bottom: 50px;
+      color: #232426;
+      font-weight: 300;
+      letter-spacing: 8px;
+      text-transform: uppercase;
+    }
+    
+    .contact-form {
+      max-width: 100%;
+      margin: 0 auto;
+    }
+    
+    .form-group {
+      margin-bottom: 30px;
+    }
+    
+    .form-label {
+      display: block;
+      margin-bottom: 12px;
+      font-weight: 400;
+      color: #232426;
+      font-size: 1.2rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+    
+    .form-input,
+    .form-textarea {
+      width: 100%;
+      padding: 18px 0;
+      border: none;
+      border-bottom: 1px solid #ddd;
+      background: transparent;
+      font-size: 1.6rem;
+      font-family: inherit;
+      color: #232426;
+      transition: all 0.3s ease;
+      box-sizing: border-box;
+      outline: none;
+    }
+    
+    .form-input:focus,
+    .form-textarea:focus {
+      border-bottom: 2px solid #232426;
+      background: transparent;
+    }
+    
+    .form-input::placeholder,
+    .form-textarea::placeholder {
+      color: #999;
+      font-size: 1.4rem;
+    }
+    
+    .form-textarea {
+      min-height: 100px;
+      resize: vertical;
+      border: 1px solid #ddd;
+      padding: 18px;
+      margin-top: 8px;
+    }
+    
+    .form-textarea:focus {
+      border: 2px solid #232426;
+    }
+    
+    .form-submit {
+      background: #232426;
+      color: #fff;
+      padding: 18px 50px;
+      border: none;
+      font-size: 1.2rem;
+      font-weight: 400;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin-top: 30px;
+      width: auto;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .form-submit:hover {
+      background: #000;
+      transform: translateY(-1px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+    
+    .contact-info {
+      text-align: center;
+      margin-top: 60px;
+      padding-top: 40px;
+      border-top: 1px solid #eee;
+    }
+    
+    .contact-info h3 {
+      font-size: 1.8rem;
+      margin-bottom: 25px;
+      color: #232426;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      font-weight: 300;
+    }
+    
+    .contact-info p {
+      font-size: 1.4rem;
+      color: #666;
+      margin-bottom: 15px;
+      line-height: 1.6;
+    }
+    
+    .contact-info a {
+      color: #232426;
+      text-decoration: none;
+      transition: color 0.3s ease;
+      border-bottom: 1px solid transparent;
+    }
+    
+    .contact-info a:hover {
+      color: #666;
+      border-bottom: 1px solid #666;
+    }
+    
+    .social-links {
+      margin-top: 35px;
+    }
+    
+    .social-links a {
+      display: inline-block;
+      margin: 0 20px;
+      font-size: 2.2rem;
+      color: #232426;
+      transition: all 0.3s ease;
+    }
+    
+    .social-links a:hover {
+      color: #666;
+      transform: translateY(-3px);
+    }
+    
+    @media (max-width: 768px) {
+      .contact-container {
+        margin: 80px 20px 40px;
+        padding: 40px 30px;
+      }
+      
+      .contact-title {
+        font-size: 3rem;
+        letter-spacing: 4px;
+        margin-bottom: 40px;
+      }
+      
+      .form-label {
+        font-size: 1.1rem;
+        letter-spacing: 1px;
+      }
+      
+      .form-input,
+      .form-textarea {
+        font-size: 1.4rem;
+      }
+      
+      .form-submit {
+        padding: 16px 40px;
+        font-size: 1.1rem;
+        letter-spacing: 2px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <a class="header__logo" href="index.html">
+      <img src="assets/tld.svg">
+    </a>
+    <div class="menu-icon js-menu-close">
+      <div class="menu-icon__inner">
+        <div class="menu-icon__bar menu-icon__bar--normal"></div>
+        <div class="menu-icon__bar menu-icon__bar--normal"></div>
+        <div class="menu-icon__bar menu-icon__bar--normal"></div>
+        <div class="menu-icon__bar menu-icon__bar--close"></div>
+        <div class="menu-icon__bar menu-icon__bar--close"></div>
+      </div>
+    </div>
+  </header>
+
+  <div class="transition"></div>
+
+  <!-- Menu -->
+  <div class="menu">
+    <ul class="menu__image-wrap">
+      <li class="menu__image-item menu__image-item--home"></li>
+    </ul>
+    <div class="menu__container">
+      <ul class="menu__list">
+        <li class="menu__item">
+          <a class="menu__link" href="index.html">HOME</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="index.html#about">ABOUT</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="contact.html">CONTACT</a>
+        </li>
+        <li class="menu__item menu__item--icon">
+          <div class="menu__sns">
+            <a target="_blank" href="https://www.instagram.com/nashdodti">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+          <div class="menu__sns">
+            <a target="_blank" href="https://twitter.com/nashdodti">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Copyright -->
+  <div class="copyright">© 2019 T L D All Rights Reserved.</div>
+
+  <!-- Social Media Icons -->
+  <div class="sns">
+    <div class="sns__icon">
+      <a target="_blank" href="https://www.instagram.com/nashdodti">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </div>
+    <div class="sns__icon">
+      <a target="_blank" href="https://twitter.com/nashdodti">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </div>
+    <div class="sns__icon sns__icon--text">
+      <a target="_blank" href="contact.html">CONTACT</a>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main id="barba-wrapper">
+    <div class="barba-container" data-namespace="contact">
+      <div class="contact-container">
+        <h1 class="contact-title">CONTACT</h1>
+        
+        <form class="contact-form" action="#" method="POST" netlify>
+          <div class="form-group">
+            <label class="form-label" for="name">Name</label>
+            <input class="form-input" type="text" id="name" name="name" required>
+          </div>
+          
+          <div class="form-group">
+            <label class="form-label" for="email">Email</label>
+            <input class="form-input" type="email" id="email" name="email" required>
+          </div>
+          
+          <div class="form-group">
+            <label class="form-label" for="subject">Subject</label>
+            <input class="form-input" type="text" id="subject" name="subject" required>
+          </div>
+          
+          <div class="form-group">
+            <label class="form-label" for="message">Message</label>
+            <textarea class="form-textarea" id="message" name="message" placeholder="Tell us about your project..." required></textarea>
+          </div>
+          
+          <button class="form-submit" type="submit">Send Message</button>
+        </form>
+        
+        <div class="contact-info">
+          <h3>Get in Touch</h3>
+          <p>We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+          <p>Email: <a href="mailto:tlddodti@mail.com">tlddodti@mail.com</a></p>
+          
+          <div class="social-links">
+            <a target="_blank" href="https://www.instagram.com/nashdodti" title="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a target="_blank" href="https://twitter.com/nashdodti" title="Twitter">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <ul class="footer__list">
+      <li class="footer__item js-text" data-emergence="hidden" data-splitting="">
+        <a href="index.html">HOME</a>
+      </li>
+      <li class="footer__item footer__item--label js-text" data-emergence="hidden" data-splitting="">
+        <p>SHOOTS</p>
+        <a class="footer__lookbook-item" href="2020.html">2020</a>
+      </li>
+      <li class="footer__item js-text" data-emergence="hidden" data-splitting="">
+        <a href="index.html#about">ABOUT</a>
+      </li>
+      <li class="footer__item js-text" data-emergence="hidden" data-splitting="">
+        <a href="contact.html">CONTACT</a>
+      </li>
+      <li class="footer__item footer__item--sns js-icon" data-emergence="hidden">
+        <div class="footer__sns">
+          <a target="_blank" href="https://www.instagram.com/nashdodti">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+        <div class="footer__sns">
+          <a target="_blank" href="https://twitter.com/nashdodti">
+            <i class="fab fa-twitter"></i>
+          </a>
+        </div>
+      </li>
+    </ul>
+  </footer>
+
+  <div class="loader-wrap">
+    <div id="lottie"></div>
+  </div>
+
+  <script src="/assets/main.js" data-turbolinks-track="reload"></script>
+  <script src="/javascripts/boot.js"></script>
+</body>
+</html>
